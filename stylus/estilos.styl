@@ -1,47 +1,99 @@
 @import "normalize.styl"
 @import "fonts.styl"
 
-gris_oscuro = #333
+gris_oscuro = #333333
 gris_claro = #818181
+rojo = #BD255B
 
 a
 	text-decoration none
-
 body
 	font-size 16px
 	font-family 'Varela Round', sans-serif
-
 figure
 	margin 0
+img
+	vertical-align top
 //buttons
 .button-menu
 	position absolute
 	top 50%
 	margin-top -10px
 	left .5em
-	color: gris_oscuro
-
+	color gris_oscuro
 //oocss classes
 .container
 	padding 1.4rem
 	font-size 0
 	text-align center
-
+.actions
+	position absolute
+	bottom 0
+	left 0
+	right 0
+	background rgba(black,.3)
+.action
+	color white
+	margin-right .5em
+	font-size 1.2em
+	&:last-child
+		margin 0
+	&.gray
+		color gris_claro
 .border-bottom
 	border-bottom 1px solid gris_claro
-
 .menu
 	display none
-
 .name
 	color gris_oscuro
-
 .relative
 	position relative
-
 .autor
 	color gris_claro
-
+.center-block
+	margin 0 auto
+.center-text
+	text-align center
+.right-text
+	text-align right
+.relative
+	position relative
+.padding
+	padding 1em
+.padding-tb
+	padding 1em 0
+.progress
+	margin 1em 0
+	position relative
+	.min
+	.max
+		font-size .8em
+		top -5px
+		position absolute
+	.min		
+		left 0
+	.max		
+		right 0
+	.total
+		height 5px
+		background gris_claro
+		width 75%
+		border-radius 5px
+		margin 0 auto
+	.state
+		height 5px
+		background rojo
+		width 30%
+		border-radius 5px
+		position relative
+	.circle
+		width 10px
+		height 10px
+		background gris_oscuro
+		border-radius 50%
+		position absolute
+		right 0
+		top -2px
 .header
 	height 3.5em
 	//a
@@ -51,7 +103,6 @@ figure
 		text-align center
 		margin 0
 		line-height 3.5em
-
 .song
 	width 8rem
 	display inline-block
@@ -59,7 +110,11 @@ figure
 	margin-right 1em
 	margin-bottom 1em
 	text-align left
-	&nth-child(even)
+	&:nth-child(even)
 		margin-right 0
 	p
 		margin .5em 0
+
+.playing
+	&.small
+		width 20em
