@@ -14,9 +14,7 @@ function View(){
 
 	this.elems = {}
 	this.elems.audio = document.createElement('audio');
-
-	this.elems.audio.src = "media/DOt_-_05_-_IMF.mp3"
-	this.elems.audio.play();
+	
 }
 
 controller.init();
