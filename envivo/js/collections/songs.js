@@ -1,3 +1,3 @@
-Sfotipy.Songs = Backbone.Collection.extend({
-    model: Sfotipy.Song
+Sfotipy.Collections.Songs = Backbone.Collection.extend({
+    model: Sfotipy.Models.Song
 });
