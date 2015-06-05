@@ -1,1 +1,1 @@
-Sfotipy.Song = Backbone.Model.extend({});
+Sfotipy.Models.Song = Backbone.Model.extend({});

@@ -1,11 +1,14 @@
-Sfotipy.Song = Backbone.View.extend({
+Sfotipy.Views.Song = Backbone.View.extend({
+    tagName: 'li',
+    className: 'item border-bottom',
     events:
 	{
 	    //'EVENTO SELECTOR': 'FUNCTION'
-	    'click .action.icon-add': 'add'
+	    'click .action.icon-add': 'select',
+	    'click .action.icon-love': 'love',
+        'click .action.icon-share': 'share'
 	},
-    tagName: 'li',
-    className: 'item border-bottom',
+
     template: Handlebars.compile($("#song-template").html()),
 
     initialize: function () {
@@ -13,11 +16,22 @@ Sfotipy.Song = Backbone.View.extend({
     },
 
     render: function () {
-        var html = this.template(this.model.toJSON());
+        var song = this.model.toJSON();
+        var html = this.template(song);
         this.$el.html(html);
         return this;
     },
-    add: function (e) {
-        alert(this.model.get("name"));
+
+    select: function (e) {
+        Sfotipy.app.player.model.set(this.model.toJSON());
+        return false;
+    },
+
+    love: function () {
+
+    },
+
+    share: function () {
+
     }
 });
