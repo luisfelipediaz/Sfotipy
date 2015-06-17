@@ -4,7 +4,11 @@
   "description": "Pruebas sfotipy luis felipe",
   "main": "server.js",
   "dependencies": {
-    "node-static": "^0.7.6"
+    "backbone": "^1.2.1",
+    "handlebars": "^3.0.3",
+    "jquery": "^1.11.3",
+    "node-static": "^0.7.6",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {},
   "scripts": {
