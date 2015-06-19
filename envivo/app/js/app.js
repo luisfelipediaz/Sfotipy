@@ -1,4 +1,3 @@
-/// <reference path="../lib/backbone.js" />
 var Sfotipy = {
     Models: {},
     Views: {},
